@@ -11,17 +11,16 @@ public class Palindrome {
         System.out.println(secondResult);
         System.out.println(thirdResult);
     }
-    public boolean isPalindrome(String startLine){
-
-        if (startLine.isEmpty()){
+    public boolean isPalindrome(String firstLine){
+        if (firstLine.isEmpty()){
             return true;
         }
-        startLine=startLine.toLowerCase().replaceAll("[^a-zA-Z0-9]","");
+        firstLine = firstLine.toLowerCase().replaceAll("[^a-zA-Z0-9]","");
 
         int leftChar=0;
-        int rightChar=startLine.length()-1;
+        int rightChar= firstLine.length()-1;
         while (leftChar<rightChar){
-            if(startLine.charAt(leftChar)!=startLine.charAt(rightChar)){
+            if(firstLine.charAt(leftChar)!= firstLine.charAt(rightChar)){
                 return false;
             }
             leftChar++;
